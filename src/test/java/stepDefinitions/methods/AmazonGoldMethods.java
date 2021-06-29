@@ -1,7 +1,7 @@
 package stepDefinitions.methods;
 
-import Utils.Driver;
-import Utils.UtilityMethods;
+import utils.Driver;
+import utils.UtilityMethods;
 import amazonPages.MainWeighPage;
 import org.junit.Assert;
 import org.openqa.selenium.WebDriver;
@@ -93,7 +93,7 @@ public class AmazonGoldMethods {
     public void userPressOnEmptyGoldAndValidatesAlertMessage(String alertMessage){
         clickOnCoin(mainWeighPage.listOfCoins, emptyCoin);
         String actualAlertMessage = driver.switchTo().alert().getText();
-        Assert.assertEquals(actualAlertMessage,alertMessage);
+        Assert.assertEquals(alertMessage,actualAlertMessage);
         UtilityMethods.timeWait(2);
     }
 

@@ -1,6 +1,6 @@
 package stepDefinitions;
 
-import Utils.Driver;
+import utils.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
