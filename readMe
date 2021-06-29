@@ -1,0 +1,33 @@
+I created new Maven framework on Java Pogramming Language. You able to run this framework using command -  'mvn test' 
+I Add dependencies such as:
+Selenium-Java - for  selenium with java
+Bonigarcia.webdriverManager - for initializing WebDriver
+Cucumber-Java - for cucumber with java
+JUnit- for validation and assertion
+maven-compiler-plugin - for compiling project 
+maven-surefire-plugin - to pass specified classes - **/*Runner.class (paralel execution)
+maven-cucumber-reporting - to generate maven sandvich pretty report.
+
+Also I integrate Cuccumber tool. I created new cucumber feature file - AmazonValidationEmptyGold.feature under the "resources" folder. 
+Inside this feature file I described test case.
+
+I implemented Page Object Model - under the pages folder, I created two classes - BasePage and MainWeighPage
+In BasePage I create new constructor with pageFactory. All pages classes will extand BasePage.
+I did it to avoid repetition write PageFactory in every pages classes.
+Inside MainWeighPage I stored all webElements that are nedeed.
+
+Under runner folder is AmazonRunner class. There I provided Cucumber option: features, glue, dryRun and plugin( for creating cucumber report in json format)
+
+In stepDefenition folder are two classes AmazonStepDef and Hook. Also there is a methods folder. Inside method folder is one class AmazonGoldMethods.
+I wrote all logic and methods in AmazonGoldMethods. And then I just call those methods in AmazonStepDef which are releated to steps from feature files. 
+In Hook class I created two methods using @Before and @After annotation. 
+Also I implemented screenShot method which will take screenshot if scenario failed and attached this screenshot to report.
+
+In utils folder you will be able to find 3 classes: ConfigReader(read setUpConfig.properties file), Driver(Initialize webDriver), UtilityMethods(reusable browser methods). 
+
+After execution test (mvn test) you will be abble to find maven sandvich pretty 
+report under target/final-pretty-reports/html-reports/cucumber-html-reports/report-feature_... .html
+
+
+
+
