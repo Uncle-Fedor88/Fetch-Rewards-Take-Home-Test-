@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: runner.AmazonRunner
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 1, Errors: 1, Skipped: 0, Time elapsed: 11.723 s <<< FAILURE! - in runner.AmazonRunner
+Validation Empty Gold.Finding and Validation Empty Gold  Time elapsed: 10.794 s  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<Yay! You find it[!]> but was:<Yay! You find it[]>
+
+Validation Empty Gold.Finding and Validation Empty Gold  Time elapsed: 10.796 s  <<< ERROR!
+org.openqa.selenium.UnhandledAlertException: 
+unexpected alert open: {Alert text : Yay! You find it!}
+  (Session info: chrome=91.0.4472.114): Yay! You find it!
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'DESKTOP-0294NP3', ip: '192.168.1.73', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '13.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 91.0.4472.19 (1bf021f248676..., userDataDir: C:\Users\votta\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:60148}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4192359721c90483be3e67868fd72601
+
